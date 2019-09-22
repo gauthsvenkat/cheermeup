@@ -41,8 +41,6 @@ def parseLink(url):
 
 def playVideo(url):
 
-    url = parseLink(url)
-
     assert url is not None, "Some error in parsing the link :-(. Try again"
         
     clip = cv2.VideoCapture(url)

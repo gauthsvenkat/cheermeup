@@ -1,5 +1,5 @@
 import praw
-from cheermeup.utils import playVideo, isOld
+from cheermeup.utils import playVideo, isOld, parseLink
 import random
 import os
 from appdirs import user_cache_dir
@@ -18,7 +18,11 @@ def main():
             for url in urls:
                 f.write("{}\n".format(url))
 
-    url = random.choice(urls)
+    url = parseLink(random.choice(urls))
+    
+    while url is None:
+        url = parseLink(random.choice(urls))
+    
     print('Press \'q\' to quit')
     playVideo(url)
 
