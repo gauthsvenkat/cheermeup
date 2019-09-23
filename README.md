@@ -9,6 +9,9 @@ This script works by scraping videos from a couple of popular animal subreddits.
 You need to have python3 installed on your system.
 ## 2. Installation
 
+### Installing using pip
+Run ```pip install cheermeup --user```
+
 ### Installing from source
 1. Clone this repository
 
@@ -23,9 +26,6 @@ If you're on windows you can download the zip from [here](https://github.com/and
 ```pip3 install . --user```
 
 from your terminal.
-
-### Installing using pip
-Run ```pip install cheermeup --user```
 
 Note :- If you're on linux you might have to add ```/home/{USERNAME}/.local/bin/``` to your ```$PATH```.
 
