@@ -10,7 +10,7 @@ You need to have python3 installed on your system.
 ## 2. Installation
 
 ### Installing using pip
-Run ```pip install cheermeup --user```
+Run ```pip3 install cheermeup --user```
 
 ### Installing from source
 1. Clone this repository
