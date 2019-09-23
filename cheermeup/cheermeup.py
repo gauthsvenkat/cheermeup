@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import praw
 from cheermeup.utils import playVideo, isOld, parseLink
 import random
