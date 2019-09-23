@@ -5,6 +5,7 @@ setuptools.setup(
     version          = '0.1',
     description      = 'Command line program to play random animal videos.',
     url              = 'https://github.com/andohuman/cheermeup',
+    download_url     = 'https://github.com/andohuman/cheermeup/archive/1.0.tar.gz',
     author           = 'andohuman',
     author_email     = 'andohuman@gmail.com',
     maintainer       = 'andohuman',
