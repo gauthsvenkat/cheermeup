@@ -1,12 +1,14 @@
 # Cheermeup
 ![](demo.gif)
-Command line program that plays random animal videos to cheer you up !
+Command line program that plays random animal videos to cheer you up!
 
 Created by [u/andohuman](https://www.reddit.com/user/andohuman) | [@andohuman](https://twitter.com/andohuman)
-## 1. Getting started 
+
+## 1. Getting started
 This script works by scraping videos from a couple of popular animal subreddits.
 
 You need to have python3 installed on your system.
+
 ## 2. Installation
 
 ### Installing using pip
@@ -27,10 +29,10 @@ If you're on windows you can download the zip from [here](https://github.com/and
 
 from your terminal.
 
-Note :- If you're on linux you might have to add ```/home/{USERNAME}/.local/bin/``` to your ```$PATH```.
+Note: If you're on linux you might have to add ```/home/{USERNAME}/.local/bin/``` to your ```$PATH```.
 
 * Run the script by executing ```cheermeup``` and enjoy.
 
-Note:- When you run the problem for the first time (of the day) it'll take a couple of minutes to fetch the links and cache them. So, give it a couple of seconds.
+Note: When you run the problem for the first time (of the day) it'll take a couple of minutes to fetch the links and cache them. So, give it a couple of seconds.
 
 If you find any bugs or want to make some improvements feel free to issue a pull request.
