@@ -1,20 +1,26 @@
 import setuptools
+import os
+
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setuptools.setup(
     name             = 'cheermeup',
-    version          = '0.1',
+    version          = '1.0',
     description      = 'Command line program to play random animal videos.',
+    long_description = read('README.md'),
+    license_files    = ('LICENSE',),
     url              = 'https://github.com/andohuman/cheermeup',
     download_url     = 'https://github.com/andohuman/cheermeup/archive/1.0.tar.gz',
-    author           = 'andohuman',
-    author_email     = 'andohuman@gmail.com',
-    maintainer       = 'andohuman',
-    maintainer_email = 'andohuman@gmail.com',
+    author           = 'Gautham Venkataraman',
+    author_email     = 'gauthsvenkat@gmail.com',
+    maintainer       = 'Gautham Venkataraman',
+    maintainer_email = 'gauthsvenkat@gmail.com',
     packages         = setuptools.find_packages(),
     install_requires = ['opencv-python', 'praw', 'appdirs'],
     entry_points     = {
         'console_scripts': [
-            'cheermeup=cheermeup.cheermeup:main',
+            'cheermeup=src.cheermeup:main',
         ],
     },
 )

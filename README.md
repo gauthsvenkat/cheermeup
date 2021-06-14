@@ -1,22 +1,50 @@
-# Cheermeup
-![](demo.gif)
-Command line program that plays random animal videos to cheer you up!
+﻿# Cheermeup
+Command line program that plays random animal from your favorite animal subreddits!
+
+## Standalone executable (windows only)
+
+![](standalone_demo.gif)
+
+
+## As a commandline app (available on windows and unix)
+
+![](commandline_demo.gif)
 
 Created by [u/andohuman](https://www.reddit.com/user/andohuman) | [@andohuman](https://twitter.com/andohuman)
 
 ## 1. Getting started
-This script works by scraping videos from a couple of popular animal subreddits.
+This app works by scraping videos from a some of the popular animal subreddits.
 
-You need to have python3 installed on your system.
+If you want to run the standalone binary (windows only), find the binary under releases. 
+
+Else if you want to install as a python module and mess with the code, stick around.
 
 ## 2. Installation
 
+Before we proceed with the actual installation, consider installing this package in a virtual python environment.
+
+### Installing venv
+Install the virtualenv python package with the following command :-
+```pip3 install virtualenv```
+
+You can now go ahead and create a virtual environment with the following command :-
+``` python3 -m venv YOUR_ENV_NAME/```
+
+Now activate the virtual environment you just created :- 
+#### On windows
+``` YOUR_ENV_NAME\Scripts\activate```
+#### On unix systems 
+``` source YOUR_ENV_NAME/bin/activate```
+
+You can now proceed with the installation of the package
+
 ### Installing using pip
-Run ```pip3 install cheermeup --user```
+You can use the python package manager pip to install this package, although it is recommended that you install the package from source for the latest updates. 
 
-### Installing from source
+Run ```pip3 install cheermeup```
+
+### Installing from source (Recommended)
 1. Clone this repository
-
 ```git clone https://github.com/andohuman/cheermeup.git```
 
 If you're on windows you can download the zip from [here](https://github.com/andohuman/cheermeup/archive/master.zip) and extract the archive.
@@ -25,14 +53,34 @@ If you're on windows you can download the zip from [here](https://github.com/and
 
 ```cd cheermeup```
 
-```pip3 install . --user```
+```pip3 install .```
 
-from your terminal.
+Note: If you're installing on linux without virtualenv you might have to add ```/home/{YOUR_USERNAME}/.local/bin/``` to your ```$PATH```.
 
-Note: If you're on linux you might have to add ```/home/{USERNAME}/.local/bin/``` to your ```$PATH```.
+* Run the app by executing ```cheermeup```.
 
-* Run the script by executing ```cheermeup``` and enjoy.
+Note: When you run the program for the first time (of the day by default) it may take a couple of seconds, depending on your internet connection and speed to fetch the links and cache them.
 
-Note: When you run the problem for the first time (of the day) it'll take a couple of minutes to fetch the links and cache them. So, give it a couple of seconds.
+If you want to scrape from your own subreddits you can do so with the following argument
+```cheermeup --subreddits SUBREDDIT_NAME SUBREDDIT_NAME SUBREDDIT_NAME ...```
 
-If you find any bugs or want to make some improvements feel free to issue a pull request.
+Execute ```cheermeup --help``` for more options
+
+## 2.1 (optional | windows only) Instructions to build standalone executable
+We would need to install the pyinstaller python package which lets us build an executable from a given python source.
+
+Run ```pip3 install pyinstaller```
+
+cd into the src directory and execute 
+```pyinstaller -w -F cheermeup.py```
+
+The ```-w``` flag supresses terminal window and the ```-F``` makes pyinstaller procduces only one single executable file
+You will find the newly built binary ```cheermeup.exe``` in the ```dist``` folder.
+
+
+
+## 3. Improvements (help needed)
+
+1. Please note that this is an alpha project I put together in a couple of hours and it might not exactly be stable all the time. Feel free to raise an issue and I'll try and look into it
+
+2. I also want to release linux and macos binaries but pyinstaller and cx_freeze won't play well with cv2, which is a dependancy and I also don't have a mac to test this tool on. If anyone would like to help/contribute (in this regard or any other bugs you find) please issue a pull request.
