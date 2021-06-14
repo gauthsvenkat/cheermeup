@@ -1,7 +1,7 @@
-﻿# Cheermeup
+# Cheermeup
 Command line program that plays random animal from your favorite animal subreddits!
 
-## Standalone executable (windows only)
+## Standalone [executable](https://github.com/andohuman/cheermeup/releases/download/v1.0/cheermeup.exe) (windows only)
 
 ![](standalone_demo.gif)
 
@@ -15,7 +15,7 @@ Created by [u/andohuman](https://www.reddit.com/user/andohuman) | [@andohuman](h
 ## 1. Getting started
 This app works by scraping videos from a some of the popular animal subreddits.
 
-If you want to run the standalone binary (windows only), find the binary under releases. 
+If you want to run the standalone binary (windows only), download it from [here](https://github.com/andohuman/cheermeup/releases/download/v1.0/cheermeup.exe). 
 
 Else if you want to install as a python module and mess with the code, stick around.
 
