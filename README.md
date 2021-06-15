@@ -64,7 +64,32 @@ Note: When you run the program for the first time (of the day by default) it may
 If you want to scrape videos from your own subreddits you can do so with the following argument
 ```cheermeup --subreddits SUBREDDIT_NAME SUBREDDIT_NAME SUBREDDIT_NAME ...```
 
-Execute ```cheermeup --help``` for more options
+The full list of available arguments are :-
+```
+usage: cheermeup.py [-h] [--client-id CLIENT_ID] [--user-agent USER_AGENT] [--regex REGEX] 
+[--cache-file-name CACHE_FILE_NAME] [--period PERIOD] [--search-limit SEARCH_LIMIT] 
+[--force-rewrite-cache] [--tries TRIES] [--subreddits SUBREDDITS [SUBREDDITS ...]]
+
+Play random animal videos from the commandline
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --client-id CLIENT_ID
+                        client id for praw module to scrape reddit
+  --user-agent USER_AGENT
+                        user agent for praw module to scrape reddit
+  --regex REGEX         regex pattern to match for video urls
+  --cache-file-name CACHE_FILE_NAME
+                        file name to cache urls for furture retrieval
+  --period PERIOD       timeperiod in seconds after which a cache file is considered old. Default = 1 day
+  --search-limit SEARCH_LIMIT
+                        maximum number of posts to scrape from a specific subreddit
+  --force-rewrite-cache
+                        force rewrite cache even if it is not old
+  --tries TRIES         maximum number of tries to play a video before giving up
+  --subreddits SUBREDDITS [SUBREDDITS ...]
+                        list of subreddits to search for videos
+```
 
 By default cheermeup only scrapes videos from the following subreddits:- 
 
