@@ -103,6 +103,7 @@ def post_url_to_video_url(url, regex):
 
 
 def play_video_from_url(url):
+    print(f"Playing video: {url}")
 
     vid = cv2.VideoCapture(url)
     rval, frame = vid.read()
