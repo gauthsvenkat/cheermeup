@@ -159,7 +159,9 @@ def main():
                                    'animalsbeingjerks',
                                    'animalsbeingderps',
                                    'animalsbeingconfused',
-                                   'whatswrongwithyourdog'],
+                                   'whatswrongwithyourdog',
+                                   'zoomies',
+                                   'startledcats'],
                         help = 'list of subreddits to search for videos')
     args = parser.parse_args()
 
